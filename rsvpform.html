@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>RSVP for ms Koningsdam</title>
+<link href='../../2016_Templates/webfonts_hal.css' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  /* reset styles
+  ____________________________________*/
+  table {border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+  table td {border-collapse: collapse;}
+  img, a img {border: 0;height: auto;outline: none;text-decoration: none;}
+  body {margin: 0;padding: 0;width: 100% !important;}
+  /* structural styles
+  ____________________________________*//
+  #bodyTable {margin: 0;padding: 0;width: 100% !important;max-width: 600px;table-layout: fixed;}
+  /* content styles
+  ____________________________________*/
+  #bodyTable a {color: #192858;text-decoration: underline;}
+  #bodyTable a:hover {color: #192858;text-decoration: none;}
+  #bodyTable a:active {color: #192858;text-decoration: none;}
+  #bodyTable a:visited {color: #192858;text-decoration: underline;}
+  #footer a {color: #666666;text-decoration: underline;}
+  #footer a:hover {color: #666666;text-decoration: none;}
+  #footer a:active {color: #666666;text-decoration: none;}
+  #footer a:visited {color: #666666;text-decoration: underline;}
+  body, td, th {font-family: 'Neutraface', Arial, sans-serif;}
+  img { text-align: center; }
+
+  .subBtn:hover {text-decoration: underline;}
+  .error {font-size:11px !important; color:#FF0000;}
+  /* mobile styles
+  ____________________________________*/
+  @media screen and (max-width: 800px) {
+  .wdt100 {width: 100% !important;}
+  .wdt90 {width: 90% !important;}
+  }
+</style>
+
+<script>
+function validateForm() {
+  //collect form data
+  var fname = document.forms["rsvpForm"]["FNAME"].value;
+  var lname = document.forms["rsvpForm"]["LNAME"].value;
+  var dob = document.forms["rsvpForm"]["BIRTH_DATE"].value;
+  var citizenship = document.forms["rsvpForm"]["CITIZENSHIP"].value;
+  var pass = document.forms["rsvpForm"]["PASSPORT"].value;
+  var fnameGuest = document.forms["rsvpForm"]["GUEST_FNAME"].value;
+  var lnameGuest = document.forms["rsvpForm"]["GUEST_LNAME"].value;
+  var dobGuest = document.forms["rsvpForm"]["GUEST_BIRTH_DATE"].value;
+  var citizenshipGuest = document.forms["rsvpForm"]["GUEST_CITIZENSHIP"].value;
+  var passGuest = document.forms["rsvpForm"]["GUEST_PASSPORT"].value;
+  var email = document.forms["rsvpForm"]["email"].value;
+  var phone = document.forms["rsvpForm"]["PHONE"].value;
+
+  document.getElementById("lnametext").innerHTML = "";
+  document.getElementById("fnametext").innerHTML = "";
+  document.getElementById("dobtext").innerHTML = "";
+  document.getElementById("citizenshiptext").innerHTML = "";
+  document.getElementById("passtext").innerHTML = "";
+  document.getElementById("phonetext").innerHTML = "";
+  document.getElementById("emailtext").innerHTML = "";
+
+  var error0=false;var error1=false;var error2=false;var error3=false;var error4=false;var error5=false;var error6=false;var error7=false;var error8=false;var error9=false;var error10=false;var error11=false;
+
+  if (lname == null || lname == "") {
+    var lnameErr = "Last&nbsp;name&nbsp;is&nbsp;required";
+    document.getElementById("lnametext").innerHTML = lnameErr ;
+    error0 = true;
+  } 
+  if (fname == null || fname == "") {
+    var fnameErr = "First&nbsp;name&nbsp;is&nbsp;required";
+    document.getElementById("fnametext").innerHTML = fnameErr ;
+    error1 = true;
+  }
+  if (dob == null || dob == "") {
+    var dobErr = "Date&nbsp;of&nbsp;Birth&nbsp;is&nbsp;required";
+    document.getElementById("dobtext").innerHTML = dobErr ;
+    error2 = true;
+  } else {
+    re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+    if(dob != '' && !dob.match(re)) {
+      document.getElementById("dobtext").innerHTML = "Use&nbsp;DD/MM/YYYY";
+      error2 = true;
+    }
+  }
+  if (citizenship == null || citizenship == "") {
+    var citizenshipErr = "Country&nbsp;is&nbsp;required";
+    document.getElementById("citizenshiptext").innerHTML = citizenshipErr ;
+    error3 = true;
+  }
+  if (pass == null || pass == "") {
+    var passErr = "ID&nbsp;number&nbsp;is&nbsp;required";
+    document.getElementById("passtext").innerHTML = passErr ;
+    error4 = true;
+  }
+  // if (lnameGuest == null || lnameGuest == "") {
+  //   var lnameGuestErr = "Last&nbsp;name&nbsp;is&nbsp;required";
+  //   document.getElementById("lnameGuesttext").innerHTML = lnameGuestErr ;
+  //   error5 = true;
+  // }
+  // if (fnameGuest == null || fnameGuest == "") {
+  //   var fnameGuestErr = "First&nbsp;name&nbsp;is&nbsp;required";
+  //   document.getElementById("fnameGuesttext").innerHTML = fnameGuestErr ;
+  //   error6 = true;
+  // }
+  // if (dobGuest == null || dobGuest == "") {
+  //   var dobGuestErr = "Date&nbsp;of&nbsp;Birth&nbsp;is&nbsp;required";
+  //   document.getElementById("dobGuesttext").innerHTML = dobGuestErr ;
+  //   error7 = true;
+  // }
+  // if (citzenshipGuest == null || citzenshipGuest == "") {
+  //   var citzenshipGuestErr = "Country&nbsp;is&nbsp;required";
+  //   document.getElementById("citzenshipGuesttext").innerHTML = citzenshipGuestErr ;
+  //   error8 = true;
+  // }
+  // if (passGuest == null || passGuest == "") {
+  //   var passGuestErr = "ID&nbsp;number&nbsp;is&nbsp;required";
+  //   document.getElementById("passGuesttext").innerHTML = passGuestErr ;
+  //   error9 = true;
+  // }
+  if (email == null || email == "") {
+    var emailErr = "Email&nbsp;is&nbsp;required";
+    document.getElementById("emailtext").innerHTML = emailErr ;
+    error10 = true;
+  }
+  if (phone == null || phone == "") {
+    var phoneErr = "Phone&nbsp;Number&nbsp;is&nbsp;required";
+    document.getElementById("phonetext").innerHTML = phoneErr ;
+    error11 = true;
+  }
+
+  if(!error0 && !error1 && !error2 && !error3 && !error4 && !error5 && !error6 && !error7 && !error8 && !error9 && !error10 && !error11){
+    return true;
+    header("Location: koningsdam_rsvpsubmit.html");
+    exit;
+  } else {
+    return false;
+  }
+
+}
+</script>
+</head>
+
+<body style="background-color:#412644; width:100%; margin: 0; padding: 0;">
+<center>
+<div style="width:800px; background-color: #e7edf7;" class="wdt100">
+<a href="http://haproofing.com/projects/holland/email/2016_Templates/html/T06.html#&WT.mc_id=email_%%PROJECT%%&WT.dcsvid=%%MARINER_ID%%&stop_mobi=yes" style="text-decoration:none; color: #142f4b; font-family: 'Neutraface', Arial, 'Helvetica Neue', Helvetica, sans-serif; font-size:16px;"><img src="images/hero_KODM.jpg" width="800" border="0" alt="ms Koningsdam" title="ms Koningsdam" style="display:block; border:none; outline:none; padding:0; width:100%; max-width:800px;" /></a>
+<div style="width:70%; padding:30px 0; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size:21px; line-height:25px; color:#192858; text-align:center;" class="wdt90">
+RSVP below by April 15th for a special Mariner luncheon and tour of the new <em>ms&nbsp;Koningsdam</em>!
+</div>
+<div style="width:70%; padding-bottom:40px; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size:16px; line-height:20px; color:#192858; text-align:center;" class="wdt90">
+The majestic new <em>ms&nbsp;Koningsdam</em> will join Holland America Line's fleet in April&nbsp;2016. You and a guest are cordially invited to attend a special luncheon for our top-tier Mariners.
+</div>
+<div style="padding:0 30px 20px 30px;">
+<table border="0" cellspacing="0" cellpadding="0" style="width:70%; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;" class="wdt90">
+  <tr>
+  <td width="25%" valign="top" style="font-size: 16px; padding-right:10px; line-height:20px; font-weight:bold; color:#643A68">WHEN:
+  </td>
+  <td width="75%" valign="top" style="font-size: 16px; line-height:20px; padding-bottom:15px;">May 21, 2016
+  </td>
+  </tr>
+  <tr>
+  <td width="25%" valign="top" style="padding-top:5px; font-size: 16px; padding-right:10px; line-height:20px; font-weight:bold; color:#643A68">WHERE:
+  </td>
+  <td width="75%" valign="top" style="padding-top:5px; font-size: 16px; line-height:20px; padding-bottom:15px;">Port of Amsterdam Cruise Terminal<br>Piet Heinkade 27<br>1019 BR<br>Amsterdam, the Netherlands
+  </td>
+  </tr>
+  <tr>
+  <td width="25%" valign="top" style="padding-top:5px; font-size: 16px; padding-right:10px; line-height:20px; font-weight:bold; color:#643A68">PROGRAM:
+  </td>
+  <td width="75%" valign="top" style="padding-top:5px; font-size: 16px; line-height:20px; padding-bottom:15px;">10:30 AM: Check-In<br>11:00 AM: Boarding<br>11:30 AM: Entertainment Program in&nbsp;the World Stage<br>12:00&ndash;1:30 PM: Lunch<br>1:30&ndash;3:30 PM: Self-Guided Tour <span style="font-style:italic;">ms&nbsp;Koningsdam</span><br>3:30 PM: All Guests Ashore
+  </td>
+  </tr>  
+  </table>
+</div>
+<div style="width:90%; border:1px #192858 dashed; border-radius: 15px; font-size:16px; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;">
+
+<form name="rsvpForm" onsubmit="return validateForm()" method="post" action="http://ebm.cheetahmail.com/r/regf2" style="padding:25px 10px;">
+<input name="aid" value="1010169812" type="hidden"> 
+<input name="n" value="7" type="hidden"> 
+<input name="sub" value="2100359647" type="hidden">
+<input name="email" value="%%email%%" type="hidden">
+  <table valign="top" align="center" border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px; padding-bottom:20px;text-align: right;">
+  Last Name:<br><span style="font-size:11px;">(legal name matching&nbsp;passport)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="LNAME" value="">
+  * <span class="error" id="lnametext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px; padding-bottom:20px;text-align: right;">
+  First Name:<br><span style="font-size:11px;">(legal name matching&nbsp;passport)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="FNAME" value="">
+  * <span class="error" id="fnametext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Date of Birth:<br><span style="font-size:11px;">(DD/MM/YYYY)</span>
+  </td>
+  <td valign="top" style="width:25%;">
+  <input type="text" name="BIRTH_DATE" value="">
+  * <span class="error" id="dobtext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Citizenship:
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="CITIZENSHIP" value="">
+  * <span class="error" id="citizenshiptext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Passport or Government-Issued ID&nbsp;Number:<br><span style="font-size:11px;">(required for boarding)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="PASSPORT" value="">
+  * <span class="error" id="passtext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Guest Last Name:<br><span style="font-size:11px;">(legal name matching&nbsp;passport)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="GUEST_LNAME" value="">
+  <span class="error" id="lnameGuesttext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Guest First Name:<br><span style="font-size:11px;">(legal name matching&nbsp;passport)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="GUEST_FNAME" value="">
+  <span class="error" id="fnameGuesttext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Guest Date of Birth:<br><span style="font-size:11px;">(DD/MM/YYYY)</span>
+  </td>
+  <td valign="top" style="width:25%;">
+  <input type="text" name="GUEST_BIRTH_DATE" value="">
+  <span class="error" id="dobGuesttext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Guest Citizenship:
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="GUEST_CITIZENSHIP" value="">
+  <span class="error" id="citizenshipGuesttext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Guest Passport or Government-Issued ID&nbsp;Number:<br><span style="font-size:11px;">(required for boarding)</span>
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="text" name="GUEST_PASSPORT" value="">
+  <span class="error" id="passGuesttext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Email:
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="email" name="email" value="">
+  * <span class="error" id="emailtext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" style="width:25%;padding-right:15px;padding-bottom:20px;text-align: right;">
+  Phone Number:
+  </td>
+  <td valign="top" style="width:25%;padding-bottom:20px;">
+  <input type="tel" name="PHONE" value="">
+  * <span class="error" id="phonetext"></span>
+  </td>
+  </tr>
+  <tr>
+  <td align="center" colspan="2" style="width:100%;">
+  <input id="subBtn" type="submit" name="submit" style="border:0; background-color:#fcb614;font-size:20px; cursor:pointer; text-transform: uppercase;width:250px;height:50px;color:#192858;" value="Submit&nbsp;&#8594;"> 
+  </td>
+  </tr>
+  <tr>
+  <td align="center" colspan="2" style="padding:20px 10px 0 10px;">
+  * Required fields.</span>
+  </td>
+  </tr>
+  </table>
+  </form>
+</div>
+<div style="width:70%; padding:20px 0; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size:21px; line-height:25px; color:#192858; text-align:center;" class="wdt90">
+We look forward to welcoming you on board <span style="font-style: italic;">ms&nbsp;Koningsdam.</span>
+</div>
+<div style="width:90%; padding-bottom:15px; font-family:'Neutraface', Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; font-size:12px; line-height:16px; color:#192858; text-align:center;" class="wdt90">
+This event is by invitation only and is non-transferable. Due to security restrictions, no additions or name changes will be allowed at the pier, and late RSVPs cannot be accommodated. All attendees should be over the age of 18 and will need to present photo ID to board the ship (passport or government-issued identification, whichever was provided with your&nbsp;RSVP).
+</div>
+<div style="padding-top:25px; padding-bottom:40px;" class="wdt90">
+  <img src="http://media.hollandamerica.com/2016_Email/02Feb16/022316_HEP1609NL3/images/HAL_Logo_wTagline_2016.png" width="227" border="0" alt="Holland America Line" title="Holland America Line" style="display:block; border:none; outline:none; text-decoration:none; padding:0; color:#ffffff; font-size:16px; height:auto; max-width:227px; min-width:227px; width:227px;" />
+</div>
+</div>
+</center>
+</body>
+</html>
